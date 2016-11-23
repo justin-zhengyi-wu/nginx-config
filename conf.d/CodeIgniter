@@ -1,5 +1,0 @@
-# CodeIgniter Project Example
-location / {
-    try_files $uri $uri/ /index.php$is_args$args;
-    root    /var/www/html/xxx;
-}
