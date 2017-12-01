@@ -24,6 +24,7 @@ location ~* \.(?:rss|atom)$ {
 location ~* \.(?:jpg|jpeg|gif|png|ico|cur|gz|svg|svgz|mp4|ogg|ogv|webm|htc)$ {
   expires 1M;
   access_log off;
+  log_not_found off;
   add_header Cache-Control "public";
 }
 
@@ -31,13 +32,14 @@ location ~* \.(?:jpg|jpeg|gif|png|ico|cur|gz|svg|svgz|mp4|ogg|ogv|webm|htc)$ {
 location ~* \.(?:css|js)$ {
   expires 1y;
   access_log off;
+  log_not_found off;
   add_header Cache-Control "public";
 }
 
 # WebFonts
 # If you are NOT using cross-domain-fonts.conf, uncomment the following directive
- location ~* \.(?:ttf|ttc|otf|eot|woff|woff2)$ {
+location ~* \.(?:ttf|ttc|otf|eot|woff|woff2)$ {
   expires 1M;
   access_log off;
   add_header Cache-Control "public";
- }
+}
